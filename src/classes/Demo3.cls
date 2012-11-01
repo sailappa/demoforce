@@ -47,4 +47,9 @@ public class Demo3
         }
         
     }
+    
+    public void sam()
+    {
+    }
+    
     }

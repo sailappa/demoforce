@@ -1,0 +1,25 @@
+<apex:page standardController="stock__c" extensions="demo1234" >
+<apex:form >
+<apex:pageBlock title="stock  details of {!stock__c.Name}">
+    <apex:pageBlockSection title="stock__cs Details" columns="1" rendered="{!value==false}">
+        <apex:inputField value="{!stock__c.stockid__c}" id="name" />
+        <apex:inputField value="{!stock__c.quantity__c}" />
+        <apex:inputField value="{!stock__c.quantitynew__c}"/>
+        <apex:inputField value="{!stock__c.country__c}" />
+        <apex:inputField value="{!stock__c.state__c}" />
+        <apex:inputField value="{!stock__c.amount__c}"/>
+        <apex:inputField value="{!stock__c.netamount__c}"/>
+    </apex:pageBlockSection>    
+    <apex:pageBlockSection title="stock__cs Details" columns="1" rendered="{!value}">
+        <apex:outputField value="{!stock__c.stockid__c}" id="name" />
+        <apex:outputField value="{!stock__c.quantity__c}" />
+        <apex:outputField value="{!stock__c.quantitynew__c}"/>
+        <apex:outputField value="{!stock__c.country__c}" />
+        <apex:outputField value="{!stock__c.state__c}" />
+        <apex:outputField value="{!stock__c.amount__c}"/>
+        <apex:outputField value="{!stock__c.netamount__c}"/>
+        </apex:pageBlockSection>
+    <apex:commandButton action="{!save}" id="save"/>
+</apex:pageBlock>
+</apex:form>
+</apex:page>
